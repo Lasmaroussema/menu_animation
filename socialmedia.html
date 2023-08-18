@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu animation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    body
+    {
+        background-color: burlywood;
+    }
+    .circle
+      {
+        width: 200px;
+        aspect-ratio: 1/1;
+        background-color: gray;
+        border: 8px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        z-index: 2;
+        cursor: pointer;
+        transition: transform 1.6s;
+      }
+      ul
+      {
+        position: absolute;
+        top: 45%;
+        left: 46%;
+      }
+
+      li
+      {
+        position: absolute;
+        list-style: none;
+        transform-origin: 233px;
+        transition: transform calc(.2s*var(--i));
+      }
+       
+      li i:hover
+      {
+        color: var(--clr) !important;
+      }
+
+     li i
+     {
+      rotate: calc(-45deg*var(--i));
+     }
+    li a{
+      color: black;
+    }
+     
+</style>
+
+
+<body>
+
+    <div class="circle"><p>+</p></div>
+<ul class="menu">
+    <li style="--i:1;--clr:red;"><a target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube" style="font-size:48px;"></a></i></li>
+    <li style="--i:2;--clr:rgb(39, 121, 208);"><a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter" style="font-size:48px;border-radius:20%;"></a></i></li>
+    <li style="--i:3;--clr:rgb(3, 77, 156);"><a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook" style="font-size:48px;border-radius:20%;"></a></i></li>
+    <li style="--i:4;--clr:purple;"><a target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram" style="font-size:48px;"></a></i></li>
+    <li style="--i:5;--clr:green;"><i class="fa fa-user" style="font-size:48px;"></i></li>
+    <li style="--i:6;--clr:rgb(255, 136, 0);"><i class="fa fa-music" style="font-size:48px;"></i></li>
+    <li style="--i:7;--clr:rgb(55, 140, 182);"><a target="_blank" href="https://web.telegram.org"><i class="fa fa-telegram" style="font-size:48px;"></a></i></li>
+    <li style="--i:8;--clr:rgb(229, 255, 0);"><i class="fa fa-gamepad" style="font-size:48px;"></i></li>
+</ul>
+<script src="./html.js"></script>
+</body>
+</html> 
